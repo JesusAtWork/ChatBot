@@ -1,0 +1,300 @@
+<html lang="es">
+<head>
+
+<script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '36a86dfadd7ae94a10880351c052e806ffc4748f');
+</script>
+
+<title>Maincra</title>
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="style.css">
+<meta name="description" content="Habla con TheFredo1000">
+<meta name="keywords" content="TheFredo1000,talk,talkbot,talk,bot,maincra,maincraa,maincraaa,niño,rata,minecraft,vegeta777,willirex">
+<link rel="shortcut icon" href="favicon.ico">
+<script src="datos.txt"></script>
+<script type="text/javascript">
+cargarDatos();
+var Personaje=0;
+var wordL=["bueno","①","este","②","es","③","un","④","rap","⑤","de","⑥","maincra","⒂","yaya","⑧","ya","⑨","esta","⑩","empezando","⑪","yo","⑫","estaba","⑬","caminando","⑭","ahí","⑮","en","⑯","eso","⑰","me","⑱","encontre","⑲","un","⑳","cubito","⑴","no","⑵","podia","⑶","creerlo","⑷","hay","⑸","Eee","⑹","que","⑺","raro","⑻","de la","⑼","nada","⑽","eso","⑾","encuentro","⑿","lagarto","⒀","gigante","⒁"]
+function cargarDatos(){
+}
+function Clean(cadena){
+  var specialChars = "!@#$^&%*()+=-[]\/{}|:<>,.";
+   for (var i = 0; i < specialChars.length; i++) {
+       cadena= cadena.replace(new RegExp("\\" + specialChars[i], 'gi'), '');
+   }
+    cadena = cadena.toLowerCase();
+   cadena = cadena.replace(/á/gi,"a");
+   cadena = cadena.replace(/é/gi,"e");
+   cadena = cadena.replace(/í/gi,"i");
+   cadena = cadena.replace(/ó/gi,"o");
+   cadena = cadena.replace(/ú/gi,"u");
+   cadena = cadena.replace(/ /gi,"█");
+   for(var j=0;j<100;j++){
+    for(var i=0;i<wordL.length;i+=2){
+   cadena=cadena.replace(wordL[i],wordL[i+1]);
+    }
+   }
+  return cadena;
+}
+  var TName=" ";
+  var M=150;
+// Mover las filas
+function Move() {
+if(document.getElementById("texto").value.replace(" ","")!==""){
+    for (var k=12;k>1;k--){
+      document.getElementById("chat"+k.toString()).innerHTML=document.getElementById("chat"+(k-1).toString()).innerHTML;
+      document.getElementById("chat"+k.toString()).style.color=document.getElementById("chat"+(k-1).toString()).style.color
+    }
+  document.getElementById("chat1").innerHTML=document.getElementById("texto").value;
+  document.getElementById("texto").value="...";
+document.getElementById("chat1").style.color="fff";
+// Responder
+setTimeout(function() {
+  if(document.getElementById("chat1").style.color!="ffff00"){
+  		for (var k=0;k<character[Personaje].length-1;k+=2){
+  		  for(var l=0;l<character[Personaje][k].length;l++){
+			      if(document.getElementById("chat1").innerHTML==character[Personaje][k][l]){
+			      Move();
+			      var o=character[Personaje][k+1][Math.floor(Math.random()*character[Personaje][k+1].length)];
+			      document.getElementById("imgn").src="img"+o.substring(1,2)+".png";
+			      document.getElementById("chat1").style.color="ffff00";
+			      document.getElementById("chat1").innerHTML=o.substring(3,999);
+			        (function myLoop (i) {
+   setTimeout(function () {
+  var audioElement = document.createElement('audio');
+  if(Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)!==""){
+  audioElement.innerHTML = '<source src="Sounds/'+Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)+'.wav" type="audio/wav" />'
+     audioElement.play();
+if(Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⒁"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⑴"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⒂"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⑷"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="①"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⑭"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⒀"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⑽"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⑿"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⑬"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⑻"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⑧"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⑪"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⑹"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⑦"||
+  Clean(o.substring(3,999)).charAt(Clean(o.substring(3,999)).length-i)=="⑲"){
+    console.log("a")
+    M=1500;
+ }else{
+   M=150;
+    console.log("b")
+ }
+}
+if (--i) myLoop(i);
+}, M)
+})(document.getElementById("chat1").innerHTML.length);
+			      }  		      }
+			  document.getElementById("chat1").innerHTML=document.getElementById("chat1").innerHTML.replace("TUNOMBRE",TName);
+  		}
+  document.getElementById("texto").value="";
+}}, 1000);
+}
+}
+ (function myLoop (i) {
+   console.log(i);
+   if(document.getElementById("imgn").src!="img1"){
+   document.getElementById("imgn").src="img1";
+   }
+   if (--i) myLoop(i);
+   }, 100)
+  // iniciar el reconocedor de voz
+	var recognition;
+	var recognizing = false;
+	if (!('webkitSpeechRecognition' in window)) {
+		alert("¡API no soportada!");
+	} else {
+		recognition = new webkitSpeechRecognition();
+		recognition.lang = "es-VE";
+		recognition.continuous = true;
+		recognition.interimResults = true;
+	}
+		recognition.onstart = function() {
+			recognizing = true;
+			console.log("empezando a eschucar");
+		}
+// Esctibir
+		recognition.onresult = function(event) {
+		 for (var i = event.resultIndex; i < event.results.length; i++) {
+			if(event.results[i].isFinal){
+				document.getElementById("texto").value = event.results[i][0].transcript;
+				Move();
+			}
+		}
+		recognition.onerror = function(event) {
+		}
+		recognition.onend = function() {
+			recognizing = false;
+			console.log("terminó de eschucar, llegó a su fin");
+			Move();
+			
+		}
+	}
+// Escuchar
+	function procesar() {
+		if (recognizing === false) {
+			recognition.start();
+			recognizing = true;
+		} else {
+			recognition.stop();
+			recognizing = false;
+		}
+	}
+</script>
+</head>
+<body>
+  
+  <table class="table">
+	 <tr>
+	   <td class="td">
+	     <label id="chat12" class="chat">
+	     </label>
+	   </td>
+	 </tr>
+	 	 <tr>
+	   <td class="td">
+      <label id="chat11" class="chat">
+	     </label>
+	   </td>
+	 	 </tr>
+	 	 	 <tr>
+	   <td class="td">
+	     <label id="chat10" class="chat">
+	     </label>
+	   </td>
+	 </tr>
+	 	 <tr>
+	   <td class="td">
+	     <label id="chat9" class="chat">
+	     </label>
+	   </td>
+	 	 </tr>
+	 	 	 <tr>
+	   <td class="td">
+	     <label id="chat8" class="chat">
+	     </label>
+	   </td>
+	 </tr>
+	 	 <tr>
+	   <td class="td">
+	     <label id="chat7" class="chat">
+	     </label>
+	   </td>
+	 	 </tr>
+	 	 	 <tr>
+	   <td class="td">
+	     <label id="chat6" class="chat">
+	     </label>
+	   </td>
+	 </tr>
+	 	 <tr>
+	   <td class="td">
+	     <label id="chat5" class="chat">
+	     </label>
+	   </td>
+	 	 </tr>
+	 	 	 <tr>
+	   <td class="td">
+	     <label id="chat4" class="chat">
+	     </label>
+	   </td>
+	 </tr>
+	 	 <tr>
+	   <td class="td">
+	     <label id="chat3" class="chat">
+	     </label>
+	   </td>
+	 	 </tr>
+	 	 	 <tr>
+	   <td class="td">
+	     <label id="chat2" class="chat">
+	     </label>
+	   </td>
+	 </tr>
+	 	 <tr>
+	   <td class="td">
+	     <label id="chat1" class="chat">
+	     </label>
+	   </td>
+	 	 </tr>
+	 	 
+	<tr>
+	 	 <td>
+	  <center>
+		<div>
+			<textarea id="texto"></textarea>
+
+		</div>
+
+	</center>
+	</td>
+</tr>
+<tr>
+  <td>
+  	   	<bottom onclick="Move()" id="Enter"></bottom>
+  	   	
+  	   		<div onclick="procesar()" id="procesar">
+	       <img class="speak" src="speak.png" width="60" height="60"/>
+	     </div>
+
+</td>
+</tr>
+	</table>
+	
+<div>
+  <img id="imgn" class="img" src="img1.png"/>
+</div>
+
+
+   <!-- GITHUB -->
+    <div class="github">
+       <a target="_blank" href="https://github.com/JesusAtWork/ChatBot/">
+           <svg  width="64px" height="64px" aria-hidden="true" version="1.1" viewBox="0 0 16 16"><path fill-rule="evenodd" fill="#111" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+     
+         </svg>
+       </a>
+    </div>
+    <div style="position:absolute;right:0%;top:5%">
+<script type="text/javascript">
+    google_ad_client = "ca-pub-1097380655672408";
+    google_ad_slot = "6297495374";
+    google_ad_width = 300;
+    google_ad_height = 600;
+</script>
+<!-- Maincra -->
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    </div>
+   <!-- FACEBOOK -->
+  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) return;
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8";
+       fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div data-href="https://maincra.rf.gd" data-layout="button_count" data-size="small" data-mobile-iframe="true">
+      <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmaincra.rf.gd%2F&amp;src=sdkpreparse">
+      <img src="F_icon.svg" class="fb-share-button">
+      </a>
+
+    </div>
+    
+</body>
+</html>
