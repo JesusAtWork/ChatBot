@@ -1,5 +1,4 @@
-<center># chatbot</center>
-
+# chatbot
 
 la wea se ve asi
 ![alt tag](http://i.imgur.com/ZEqhd0o.png)
